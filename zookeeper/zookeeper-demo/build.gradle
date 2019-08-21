@@ -1,0 +1,37 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.7.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'me.zaccoding'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // curator
+    compile('org.apache.curator:curator-framework:4.2.0') {
+        exclude module: 'shared' // 특정 모듈만 제외
+        exclude group: 'org.apache.zookeeper', module: 'zookeeper'
+    }
+    compile 'org.apache.curator:curator-recipes:4.2.0'
+
+    // zookeeper
+    compile 'org.apache.zookeeper:zookeeper:3.5.5'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
