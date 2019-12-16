@@ -1,0 +1,18 @@
+#####################################
+## common properties
+#####################################
+
+zookeeper:
+  connectString: 192.168.79.130:2181
+  maxRetries: 3
+  sleepMsBetweenRetries: 100
+
+---
+
+#####################################
+## locking
+#####################################
+
+spring:
+  profiles: locking
+

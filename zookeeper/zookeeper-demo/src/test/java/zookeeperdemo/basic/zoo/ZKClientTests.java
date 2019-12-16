@@ -1,4 +1,4 @@
-package zookeeperdemo.zoo;
+package zookeeperdemo.basic.zoo;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,6 +19,7 @@ import org.slf4j.LoggerFactory;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
+import zookeeperdemo.basic.zoo.ZKConnection;
 import zookeeperdemo.common.TestHelper;
 
 /**

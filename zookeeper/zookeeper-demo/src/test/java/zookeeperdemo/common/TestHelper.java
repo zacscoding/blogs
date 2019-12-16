@@ -1,7 +1,6 @@
 package zookeeperdemo.common;
 
 /**
- *
  * @GitHub : https://github.com/zacscoding
  */
 public class TestHelper {

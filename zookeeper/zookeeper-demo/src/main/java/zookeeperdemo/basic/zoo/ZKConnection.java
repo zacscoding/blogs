@@ -1,4 +1,4 @@
-package zookeeperdemo.zoo;
+package zookeeperdemo.basic.zoo;
 
 import static java.util.Objects.requireNonNull;
 
