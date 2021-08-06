@@ -1,0 +1,114 @@
+/Users/evan.kim/Documents/git/zaccoding/echo-gorm-realworld-app
+├── Dockerfile
+├── Makefile
+├── README.md
+├── api
+│   └── types
+│       ├── article.go
+│       ├── comment.go
+│       ├── common.go
+│       ├── status.go
+│       └── user.go
+├── article
+│   ├── article.go
+│   ├── comment.go
+│   ├── database
+│   │   ├── article.go
+│   │   ├── article_query.go
+│   │   ├── article_query_test.go
+│   │   ├── article_test.go
+│   │   ├── comment.go
+│   │   ├── comment_test.go
+│   │   ├── fixtures
+│   │   │   ├── article_favorites.yaml
+│   │   │   ├── article_tags.yaml
+│   │   │   ├── articles.yaml
+│   │   │   ├── data.md
+│   │   │   ├── tags.yaml
+│   │   │   └── users.yaml
+│   │   └── mocks
+│   │       └── article_mock.go
+│   ├── handler.go
+│   ├── model
+│   │   ├── article_model.go
+│   │   └── article_query.go
+│   └── request.go
+├── config
+│   ├── config.go
+│   ├── config_test.go
+│   ├── default.go
+│   └── test-config.yaml
+├── config-docker.yaml
+├── config.yaml
+├── database
+│   ├── database.go
+│   ├── database_util.go
+│   ├── error.go
+│   └── logger.go
+├── docker-compose.yaml
+├── docs
+│   ├── doc.html
+│   └── swagger.json
+├── go.mod
+├── go.sum
+├── integration
+│   ├── README.md
+│   ├── go.mod
+│   └── postman
+│       ├── Conduit.postman_collection.json
+│       └── run-api-tests.sh
+├── logging
+│   ├── config.go
+│   └── logger.go
+├── main.go
+├── migrations
+│   ├── 000001_initial.down.sql
+│   ├── 000001_initial.up.sql
+│   ├── 000002_initial_user.down.sql
+│   ├── 000002_initial_user.up.sql
+│   └── 000003_initial_data.up.sql
+├── out
+│   ├── TODO.md
+│   ├── apis.md
+│   ├── data.txt
+│   ├── fixtures
+│   │   ├── follows.yaml
+│   │   └── users.yaml
+│   ├── query.sql
+│   ├── temp.json
+│   └── temp_test.go
+├── scripts
+│   └── compose.sh
+├── server
+│   └── server.go
+├── serverenv
+│   ├── env.go
+│   └── setup.go
+├── user
+│   ├── database
+│   │   ├── mocks
+│   │   │   └── user_mock.go
+│   │   ├── user.go
+│   │   └── user_test.go
+│   ├── handler.go
+│   ├── handler_test.go
+│   ├── model
+│   │   └── user_model.go
+│   ├── profile.go
+│   ├── profile_test.go
+│   ├── request.go
+│   ├── user.go
+│   └── user_test.go
+└── utils
+    ├── authutils
+    │   ├── auth.go
+    │   └── middleware.go
+    ├── hashutils
+    │   └── password.go
+    └── httputils
+        ├── bind.go
+        ├── error.go
+        └── validator.go
+
+27 directories, 83 files
+

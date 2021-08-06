@@ -4,8 +4,6 @@ import static java.util.Objects.requireNonNull;
 
 import java.util.concurrent.CountDownLatch;
 
-import org.apache.zookeeper.WatchedEvent;
-import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooKeeper;
 
@@ -32,16 +30,13 @@ public class ZKConnection {
         }
 
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        zoo = new ZooKeeper(host, 2000, new Watcher() {
-            @Override
-            public void process(WatchedEvent event) {
-                if (event.getState() == KeeperState.SyncConnected) {
-                    logger.info("Success to connect {}", host);
-                    updateConnectionState(true);
-                    countDownLatch.countDown();
-                } else {
-                    logger.debug("Receive new watched event : {}", event.getState());
-                }
+        zoo = new ZooKeeper(host, 2000, event -> {
+            if (event.getState() == KeeperState.SyncConnected) {
+                logger.info("Success to connect {}", host);
+                updateConnectionState(true);
+                countDownLatch.countDown();
+            } else {
+                logger.debug("Receive new watched event : {}", event.getState());
             }
         });
 
