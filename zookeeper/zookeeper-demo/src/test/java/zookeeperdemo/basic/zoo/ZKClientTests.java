@@ -19,7 +19,6 @@ import org.slf4j.LoggerFactory;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
-import zookeeperdemo.basic.zoo.ZKConnection;
 import zookeeperdemo.common.TestHelper;
 
 /**
@@ -28,7 +27,8 @@ import zookeeperdemo.common.TestHelper;
  */
 public class ZKClientTests {
 
-    String host = "192.168.79.130:2181";
+    // String host = "192.168.79.130:2181";
+    String host = "127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183";
     ZKConnection zkConnection1;
     ZooKeeper zooKeeper1;
 
